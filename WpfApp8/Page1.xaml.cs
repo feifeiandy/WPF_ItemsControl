@@ -31,32 +31,32 @@ namespace WpfApp8
 
             Person person1 = new Person();
             person1.ID = 1;
-            person1.Name = "小三";
+            person1.PersonName = "小三";
             People people1 = new People();
             people1.Add(person1);
             Family family1 = new Family();
             family1.ID = 1;
-            family1.Name = "张三家";
+            family1.FamilyName = "张三家";
             family1.Merbers = people1;
             families.Add(family1);
             Like like1 = new Like();
-            like1.Name = "潇洒";
+            like1.LikeName = "潇洒";
             Likes likes = new Likes();
             likes.Add(like1);
             person1.PLike = likes;
 
             Person person2 = new Person();
             person2.ID = 2;
-            person2.Name = "小四";
+            person2.PersonName = "小四";
             People people2 = new People();
             people2.Add(person2);
             Family family2 = new Family();
-            family2.Name = "李四家";
+            family2.FamilyName = "李四家";
             family2.ID = 2;
             family2.Merbers = people2;
             families.Add(family2);
             Like like2 = new Like();
-            like2.Name = "干活";
+            like2.LikeName = "干活";
             Likes likes2 = new Likes();
             likes2.Add(like2);
             person2.PLike = likes2;

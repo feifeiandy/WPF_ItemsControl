@@ -20,7 +20,7 @@ namespace WpfApp8
     public class Family
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string FamilyName { get; set; }
         public People Merbers { get; set; }
 
     }
@@ -32,7 +32,7 @@ namespace WpfApp8
     public class Person
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string PersonName { get; set; }
         public Likes PLike { get; set; }
     }
 
@@ -42,6 +42,6 @@ namespace WpfApp8
     }
     public class Like
     {
-        public string Name { get; set; }
+        public string LikeName { get; set; }
     }
 }

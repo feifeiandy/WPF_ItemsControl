@@ -17,20 +17,41 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label>家庭</Label>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
+            <Label Content="{Binding FamilyName}" />
+            <Label>成员:</Label>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Orientation="Horizontal">
+            <Label Content="{Binding Merbers/PersonName}" />
+            <Label>爱好：</Label>
+        </StackPanel>
         <ListBox
             x:Name="lst1"
-            DisplayMemberPath="Name"
+            Grid.Row="1"
+            DisplayMemberPath="FamilyName"
             IsSynchronizedWithCurrentItem="True"
             ItemsSource="{Binding}" />
         <ListBox
             x:Name="lst2"
+            Grid.Row="1"
             Grid.Column="1"
-            DisplayMemberPath="Name"
+            DisplayMemberPath="PersonName"
             ItemsSource="{Binding Merbers}" />
         <ListBox
             x:Name="lst3"
+            Grid.Row="1"
             Grid.Column="2"
-            DisplayMemberPath="Name"
+            DisplayMemberPath="LikeName"
             ItemsSource="{Binding Merbers/PLike}" />
     </Grid>
 </Page>
